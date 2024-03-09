@@ -1,0 +1,39 @@
+@use '../../styles/color' as color;
+@use '../../styles/core' as core;
+@use '../../styles/typography' as typography;
+
+.Task1 {
+    &-search {
+        position: relative;
+
+        &--input {
+            border: 1px solid color.$dark-grey-1;
+            padding: core.$space;
+            width: 300px;
+            border-radius: core.$space * 2;
+        }
+
+        &--dropdown {
+            position: absolute;
+            z-index: 800;
+            top: core.$space * 5;
+            width: 100%;
+            background-color: color.$light-grey-3;
+            border-radius: core.$space * 2;
+            color: color.$dark-grey-1;
+            font-weight: typography.$font-weight-semi;
+            padding: core.$space 0;
+
+            li {
+                padding: core.$space core.$space * 2;
+
+                &:hover {
+                    background-color: color.$light-grey-2;
+                    border-radius: core.$space * 2;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}

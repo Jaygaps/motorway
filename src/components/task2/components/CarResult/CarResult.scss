@@ -1,0 +1,42 @@
+@use '../../../../styles/core' as core;
+@use '../../../../styles/typography' as typography;
+@use '../../../../styles/color' as color;
+
+.CarResult {
+    background-color: color.$light-grey-3;
+    color: color.$primary-black;
+    border-radius: core.$space * 2;
+
+    &-imgwrapper {
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+
+    &-carimg {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: core.$space * 2;
+        border-top-left-radius: core.$space * 2;
+    }
+
+    &-carlikes {
+        background-color: color.$light-grey-3;
+        padding: 2px core.$space * 0.75;
+        font-size: 12px;
+        border-radius: core.$space * 2;
+        position: absolute;
+        top: core.$space * 0.75;
+        right: core.$space * 0.75;
+        font-weight: typography.$font-weight-semi;
+    }
+
+    &-carcontent {
+        padding: core.$space core.$space * 2;
+    }
+
+    &-cardescription {
+        margin-bottom: core.$space ;
+    }
+}

@@ -1,0 +1,24 @@
+@use '../../styles/color' as color;
+@use '../../styles/breakpoints' as breakpoints;
+
+.Task2 {
+    &-heading {
+        margin-bottom: 40px;
+        font-size: revert;
+        font-weight: 600;
+    }
+
+    &-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+
+        @media only screen and (min-width: breakpoints.$breakpointTabletMobile) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media only screen and (min-width: breakpoints.$breakpointTablet) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
